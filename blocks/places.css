@@ -1,0 +1,81 @@
+.places {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.places__content {
+  margin: 0 auto;
+  max-width: 984px;
+  display: grid;
+  grid-gap: 48px 40px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2.5fr repeat(2, 3fr) 1fr;
+  grid-template-areas:
+    "title artists"
+    "image text"
+    "image text"
+    "nft text";
+}
+
+.places__title {
+  grid-area: title;
+  font-family: "Inter-Black", sans-serif;
+  font-size: 72px;
+  line-height: 1.1;
+}
+
+.places__image {
+  grid-area: image;
+  box-shadow: 10px 10px 25px 0px #00000080;
+}
+
+.places__artists {
+  grid-area: artists;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.places__artists-heading {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  color: #AAAAAA;
+}
+
+.places__artists-list {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.places__artists-list-item {
+}
+
+.places__description {
+  grid-area: text;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.places__description p + p {
+  margin-top: 25px;
+}
+
+.places__buy-piece {
+  grid-area: nft;
+  background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
+  box-shadow: 5px 5px 10px 0px #00000040;
+  max-width: 289px;
+  max-height: 48px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
